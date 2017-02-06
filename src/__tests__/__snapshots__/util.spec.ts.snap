@@ -1,0 +1,178 @@
+exports[`bump packages should bump all packages including dependencies 1`] = `
+"[
+  {
+    \"name\": \"pkg-1\",
+    \"path\": \"pkg-1\",
+    \"config\": {
+      \"name\": \"pkg-1\",
+      \"version\": \"1.0.1\"
+    }
+  },
+  {
+    \"name\": \"pkg-2\",
+    \"path\": \"pkg-2\",
+    \"config\": {
+      \"name\": \"pkg-2\",
+      \"version\": \"1.0.1\",
+      \"dependencies\": {
+        \"pkg-1\": \"^1.0.1\"
+      }
+    }
+  },
+  {
+    \"name\": \"pkg-3\",
+    \"path\": \"pkg-3\",
+    \"config\": {
+      \"name\": \"pkg-3\",
+      \"version\": \"1.0.1\",
+      \"devDependencies\": {
+        \"pkg-2\": \"^1.0.0\"
+      },
+      \"devDependssssncies\": {
+        \"pkg-2\": \"^1.0.1\"
+      }
+    }
+  },
+  {
+    \"name\": \"pkg-4\",
+    \"path\": \"pkg-4\",
+    \"config\": {
+      \"name\": \"pkg-4\",
+      \"version\": \"1.0.1\",
+      \"optionalDependencies\": {
+        \"pkg-3\": \"^1.0.1\"
+      }
+    }
+  },
+  {
+    \"name\": \"pkg-5\",
+    \"path\": \"pkg-5\",
+    \"config\": {
+      \"name\": \"pkg-5\",
+      \"version\": \"1.0.1\",
+      \"peerDependencies\": {
+        \"pkg-4\": \"^1.0.1\"
+      }
+    }
+  }
+]"
+`;
+
+exports[`bump packages should bump all packages, ignoring irrelevant dependencies 1`] = `
+"[
+  {
+    \"name\": \"pkg-1\",
+    \"path\": \"pkg-1\",
+    \"config\": {
+      \"name\": \"pkg-1\",
+      \"version\": \"1.0.1\"
+    }
+  },
+  {
+    \"name\": \"pkg-2\",
+    \"path\": \"pkg-2\",
+    \"config\": {
+      \"name\": \"pkg-2\",
+      \"version\": \"1.0.1\",
+      \"dependencies\": {
+        \"pkg-1\": \"^1.0.1\"
+      }
+    }
+  },
+  {
+    \"name\": \"pkg-3\",
+    \"path\": \"pkg-3\",
+    \"config\": {
+      \"name\": \"pkg-3\",
+      \"version\": \"1.0.1\",
+      \"devDependencies\": {
+        \"pkg-2\": \"^1.0.0\",
+        \"foo\": \"^1.0.0\"
+      },
+      \"devDependssssncies\": {
+        \"pkg-2\": \"^1.0.1\",
+        \"foo\": \"^1.0.0\"
+      }
+    }
+  },
+  {
+    \"name\": \"pkg-4\",
+    \"path\": \"pkg-4\",
+    \"config\": {
+      \"name\": \"pkg-4\",
+      \"version\": \"1.0.1\",
+      \"optionalDependencies\": {
+        \"pkg-3\": \"^1.0.1\"
+      }
+    }
+  },
+  {
+    \"name\": \"pkg-5\",
+    \"path\": \"pkg-5\",
+    \"config\": {
+      \"name\": \"pkg-5\",
+      \"version\": \"1.0.1\",
+      \"peerDependencies\": {
+        \"pkg-4\": \"^1.0.1\"
+      }
+    }
+  }
+]"
+`;
+
+exports[`bump packages should bump some packages 1`] = `
+"[
+  {
+    \"name\": \"pkg-1\",
+    \"path\": \"pkg-1\",
+    \"config\": {
+      \"name\": \"pkg-1\",
+      \"version\": \"1.0.0\"
+    }
+  },
+  {
+    \"name\": \"pkg-2\",
+    \"path\": \"pkg-2\",
+    \"config\": {
+      \"name\": \"pkg-2\",
+      \"version\": \"1.0.0\",
+      \"dependencies\": {
+        \"pkg-1\": \"^1.0.0\"
+      }
+    }
+  },
+  {
+    \"name\": \"pkg-3\",
+    \"path\": \"pkg-3\",
+    \"config\": {
+      \"name\": \"pkg-3\",
+      \"version\": \"1.0.0\",
+      \"devDependencies\": {
+        \"pkg-2\": \"^1.0.0\"
+      }
+    }
+  },
+  {
+    \"name\": \"pkg-4\",
+    \"path\": \"pkg-4\",
+    \"config\": {
+      \"name\": \"pkg-4\",
+      \"version\": \"1.0.1\",
+      \"optionalDependencies\": {
+        \"pkg-3\": \"^1.0.0\"
+      }
+    }
+  },
+  {
+    \"name\": \"pkg-5\",
+    \"path\": \"pkg-5\",
+    \"config\": {
+      \"name\": \"pkg-5\",
+      \"version\": \"1.0.1\",
+      \"peerDependencies\": {
+        \"pkg-4\": \"^1.0.1\"
+      }
+    }
+  }
+]"
+`;
